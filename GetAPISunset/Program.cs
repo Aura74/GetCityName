@@ -14,6 +14,7 @@ namespace GetAPISunset
 {
     //sajbRMwINr1Lt5aJ00BGOA==YiUuGpbzfb7QuFqP
     //https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=37.42159&longitude=-122.0837&localityLanguage=en
+    
     class Program
     {
         static async Task Main(string[] args)
@@ -21,11 +22,11 @@ namespace GetAPISunset
             double latitude = 60.67452;
             double longitude = 17.14174;
 
-            var _client = new CityNameClient();
+            var _cityClient = new CityNameClient();
             
-            var result = await _client.GetDayAsync(latitude, longitude);
+            var resultFromCity = await _cityClient.GetCityAsync(latitude, longitude);
 
-            Console.WriteLine(result.city.ToString());
+            Console.WriteLine(resultFromCity.city.ToString());
 
 
         }
