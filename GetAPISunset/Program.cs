@@ -27,8 +27,6 @@ namespace GetAPISunset
             var resultFromCity = await _cityClient.GetCityAsync(latitude, longitude);
 
             Console.WriteLine(resultFromCity.city.ToString());
-
-
         }
     }
 }
