@@ -21,12 +21,17 @@ namespace GetAPISunset
         {
             double latitude = 60.67452;
             double longitude = 17.14174;
+            //string chosenCiy = "Ljusne";
 
             var _cityClient = new CityNameClient();
-            
+            //var _cityNamell = new CityNameFromName();
+
             var resultFromCity = await _cityClient.GetCityAsync(latitude, longitude);
+            //var resultCityNameFromCity = await _cityNamell.GetCityFromCityAsync(chosenCiy);
+            //var resultCityNameFromCity = await _cityNamell.GetCityFromCityAsync();
 
             Console.WriteLine(resultFromCity.city.ToString());
+            //Console.WriteLine($"Latitude: {resultCityNameFromCity.Latitude} Longitude: {resultCityNameFromCity.Longitude} Ortsma; {resultCityNameFromCity.NameLLN}");
         }
     }
 }
